@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Tailwind CSS CDN for quick setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the Inter font and to ensure full height for centering */
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+        /* Basic styling for the weather icon, if needed, though Tailwind handles most */
+        .weather-icon {
+            width: 100px; /* Adjust size as needed */
+            height: 100px;
+            margin: 0 auto; /* Center the icon */
+        }
+        /* Specific styling for error messages, leveraging Tailwind's text-red */
+        .error {
+            color: #ef4444; /* Tailwind's red-500 */
+            font-weight: 500;
+        }
+    </style>
+</head>
+<!-- Body background: Deep Navy Blue -->
+<body class="bg-[#001F3F] flex items-center justify-center p-4">
+    <!-- Main card background: A very light, almost off-white gray for a clean look -->
+    <main class="w-full max-w-md bg-[#F0F4F8] rounded-xl shadow-lg p-6 sm:p-8 text-center">
+        <!-- Heading text color: Navy Blue for contrast on the light card -->
+        <h2 class="text-3xl font-bold text-[#001F3F] mb-6">Weather App</h2>
+
+        <!-- Input field for city name -->
+        <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter city name"
+            class="w-full px-4 py-3 mb-6 text-lg text-gray-700 placeholder-gray-500 border border-[#367588] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFD700] focus:border-transparent transition duration-200 ease-in-out"
+        />
+
+        <!-- Container for displaying weather information -->
+        <!-- Background: Changed to a very light blue -->
+        <div
+            id="weatherContainer"
+            class="weather-info bg-[#E0F2F7] p-6 rounded-lg shadow-inner text-left flex flex-col items-center justify-center min-h-[150px]"
+        >
+            <!-- Initial prompt text color: Changed to Navy Blue for contrast -->
+            <p class="text-[#001F3F]">Enter a city name above to see the weather!</p>
+        </div>
+    </main>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
